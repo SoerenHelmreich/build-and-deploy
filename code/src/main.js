@@ -1,11 +1,13 @@
-import {  getSecondsLeftOfYear, getTimeString } from "./clock";
+import {  getMinuteLeftofYear, getSecondsLeftOfYear, getTimeString } from "./clock";
 
 const timeContainer = document.getElementById("time");
-const timeLeft = document.getElementById("seconds-left");
+const secondsLeft = document.getElementById("seconds-left");
+const minutesLeft = document.getElementById("minutes-left");
 
 const render = () => {
   const now = new Date();
-  timeLeft.innerText = getSecondsLeftOfYear(now);
+  secondsLeft.innerText = getSecondsLeftOfYear(now);
+  minutesLeft.innerText = getMinuteLeftofYear();
   timeContainer.innerText = getTimeString(now);
 }
 
